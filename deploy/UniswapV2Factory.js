@@ -3,7 +3,7 @@ const {
   bytecode,
   abi,
 } = require("../deployments/mainnet/UniswapV2Factory.json");
-
+console.log("now deploy factory");
 module.exports = async function ({
   ethers,
   getNamedAccounts,

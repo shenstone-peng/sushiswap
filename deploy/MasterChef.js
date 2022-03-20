@@ -1,3 +1,4 @@
+console.log("here2");
 module.exports = async function ({ ethers, deployments, getNamedAccounts }) {
   const { deploy } = deployments
 
@@ -11,7 +12,7 @@ module.exports = async function ({ ethers, deployments, getNamedAccounts }) {
     log: true,
     deterministicDeployment: false
   })
-
+  console.log("here1");
   if (await sushi.owner() !== address) {
     // Transfer Sushi Ownership to Chef
     console.log("Transfer Sushi Ownership to Chef")
@@ -27,4 +28,5 @@ module.exports = async function ({ ethers, deployments, getNamedAccounts }) {
 }
 
 module.exports.tags = ["MasterChef"]
-module.exports.dependencies = ["UniswapV2Factory", "UniswapV2Router02", "SushiToken"]
+console.log("need Mocks")
+module.exports.dependencies = ["test","UniswapV2Factory", "UniswapV2Router02", "SushiToken"]

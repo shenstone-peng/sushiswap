@@ -8,7 +8,7 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
   const chainId = await getChainId();
 
   let wethAddress;
-
+  console.log("0"); 
   if (chainId === "31337") {
     wethAddress = (await deployments.get("WETH9Mock")).address;
   } else if (chainId in WNATIVE_ADDRESS) {
